@@ -1,6 +1,6 @@
 export enum ButtonVariant {
   default = "default",
-  primary = "primary",
+  bordered = "bordered",
 }
 export enum ButtonType {
   button = "button",
