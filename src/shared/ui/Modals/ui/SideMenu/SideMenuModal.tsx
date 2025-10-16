@@ -16,12 +16,12 @@ export const SideMenuModal = () => {
 
   useEffect(() => {
     if (isOpen) {
-      controls.start({ x: 0, transition: { type: "spring", stiffness: 120, damping: 18 } });
+      controls.start({ x: 0,backdropFilter:'blur(6px)', transition: { type: "spring", stiffness: 120, damping: 18 } });
     }
   }, [isOpen]);
 
   const handleClose = async () => {
-    await controls.start({ x: "-100%", transition: { duration: 0.3, ease: "easeInOut" } });
+    await controls.start({ x: "-100%",  backdropFilter: "blur(0px)", transition: { duration: 0.3, ease: "easeInOut" } });
     closeModal();
   };
 
@@ -31,7 +31,7 @@ export const SideMenuModal = () => {
         <motion.div
           key="side-menu"
           className="fixed left-0 top-0 h-full w-[20vw] bg-white z-50 shadow-lg flex justify-start"
-          initial={{ x: "-100%" }} 
+          initial={{ x: "-100%", backdropFilter: "blur(0px)" }} 
           animate={controls}
         >
           <div className="p-4 flex flex-col w-full">
