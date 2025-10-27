@@ -14,7 +14,7 @@ import { create } from "zustand";
 //   updateBears: (newBears) => set({ bears: newBears }),
 // }))
 
-type CurrentModal = 'SideMenuModal' | null;
+type CurrentModal = "SideMenuModal" | null;
 
 interface ModalState {
   isOpen: boolean;
@@ -25,7 +25,7 @@ interface ModalState {
 
 export const useModal = create<ModalState>((set) => ({
   isOpen: false,
-  currentModal:null,
+  currentModal: null,
   openModalWindow: () => set({ isOpen: true }),
   closeModalWindow: () => set({ isOpen: false }),
 }));

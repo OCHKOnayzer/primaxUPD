@@ -22,7 +22,7 @@ export const Button: React.FC<ButtonProps> = ({
   type,
   onClick,
   disabled,
-  className
+  className,
 }) => {
   return (
     <button
@@ -33,7 +33,7 @@ export const Button: React.FC<ButtonProps> = ({
         "transition font-medium disabled:opacity-50 disabled:cursor-not-allowed",
         variantButtonStyles[variant],
         sizesButtonsStyles[size],
-        className
+        className,
       )}
     >
       {children}

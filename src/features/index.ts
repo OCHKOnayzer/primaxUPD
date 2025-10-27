@@ -1,1 +1,1 @@
-export { CurrentModal } from "./Modals"
+export { CurrentModal } from "./Modals";
