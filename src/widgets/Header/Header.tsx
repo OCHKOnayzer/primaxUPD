@@ -13,7 +13,7 @@ import {
 } from "@/types/enums/buttonEnums";
 
 export const Header = () => {
-  const openModal = useModal((state) => state.toggleModalWindow);
+  const openModal = useModal((state) => state.openModalWindow);
 
   return (
     <header className="relative flex justify-center h-[12vh] bg-custom-gradient after:content-[''] after:block after:w-full after:h-6 after:rounded-t-[24px] after:bg-white after:absolute after:-bottom-px after:left-0">
