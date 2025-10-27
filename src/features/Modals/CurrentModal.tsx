@@ -7,7 +7,7 @@ import { useModal } from "@/shared";
 export const CurrentModal = () => {
   const [isAnimatingClose, setIsAnimatingClose] = useState<boolean>(false);
 
-  const {currentModal} = useModal()
+  const { currentModal } = useModal();
 
   return (
     <div
