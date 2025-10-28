@@ -1,9 +1,11 @@
+import { useState } from "react";
 import { useAnimationControls } from "framer-motion";
 import { useModal } from "@/shared";
 
 export function useControls() {
   const controls = useAnimationControls();
-  const closeModal = useModal((state) => state.closeModalWindow);
+  const { closeModalWindow } = useModal();
+  const [closing, setClosing] = useState<boolean>(false);
 
   const start = () =>
     controls.start({
@@ -20,13 +22,17 @@ export function useControls() {
     });
 
   const handleClose = async () => {
+    if (closing) return;
+    setClosing(true);
     await close();
-    closeModal();
+    closeModalWindow();
+    setClosing(false);
   };
 
   return {
     start,
     controls,
     handleClose,
+    closing,
   };
 }
