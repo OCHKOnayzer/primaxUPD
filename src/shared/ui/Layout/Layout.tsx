@@ -1,6 +1,6 @@
 "use client";
 
-import React, { FC, PropsWithChildren, useEffect } from "react";
+import React, { FC, PropsWithChildren } from "react";
 import { Header } from "@/widgets";
 import { Footer } from "@/widgets";
 import { ModalLayout } from "@/shared";
@@ -13,7 +13,9 @@ export const Layout: FC<PropsWithChildren> = ({ children }) => {
     <div className="flex min-h-screen flex-col">
       <Header />
       {isOpen && <ModalLayout />}
-      <main className="flex-1 relative">{children}</main>
+      <main className="flex-1 relative">
+        <div className="flex justify-center">{children}</div>
+      </main>
       <Footer />
     </div>
   );
