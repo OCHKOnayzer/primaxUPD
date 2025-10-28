@@ -1,7 +1,7 @@
 import React from "react";
 import clsx from "clsx";
 
-import { ButtonProps } from "@/types/buttonTypes";
+import { ButtonProps } from "./types";
 
 const variantButtonStyles = {
   default: "bg-indigo-600 text-white hover:bg-indigo-700",
